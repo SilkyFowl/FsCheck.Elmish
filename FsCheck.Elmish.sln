@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{AF7CAC75-C942-48E7-BD14-78A0D686E99B}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CBE0E349-1335-4D16-B325-52585378781F}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsCheck.Elmish", "src\FsCheck.Elmish\FsCheck.Elmish.fsproj", "{DE473FA2-F499-4F34-B5F7-FB1D8130577F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{14FFE754-E5CA-437A-B5AD-5FBEDFBD801A}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsCheck.Elmish.Tests", "tests\FsCheck.Elmish.Tests\FsCheck.Elmish.Tests.fsproj", "{3A1E75CE-0089-4AB6-95AE-42AAEF04ECDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE473FA2-F499-4F34-B5F7-FB1D8130577F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE473FA2-F499-4F34-B5F7-FB1D8130577F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE473FA2-F499-4F34-B5F7-FB1D8130577F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE473FA2-F499-4F34-B5F7-FB1D8130577F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A1E75CE-0089-4AB6-95AE-42AAEF04ECDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A1E75CE-0089-4AB6-95AE-42AAEF04ECDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A1E75CE-0089-4AB6-95AE-42AAEF04ECDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A1E75CE-0089-4AB6-95AE-42AAEF04ECDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE473FA2-F499-4F34-B5F7-FB1D8130577F} = {CBE0E349-1335-4D16-B325-52585378781F}
+		{3A1E75CE-0089-4AB6-95AE-42AAEF04ECDD} = {14FFE754-E5CA-437A-B5AD-5FBEDFBD801A}
+	EndGlobalSection
+EndGlobal
