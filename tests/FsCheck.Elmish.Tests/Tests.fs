@@ -205,7 +205,7 @@ module RandomNumberStateMachine =
 
                                     modelMapper state = mState
                                     |@ $"%A{startedMsg}: model = %A{mState}, actual = %A{c.State}"
-                                    .&. Cmd.assertMsg mCmds cmds }
+                                    .&. Cmd.msgProperty mCmds cmds }
                     }
 
                 let finishedMsgOperation =
@@ -238,7 +238,7 @@ module RandomNumberStateMachine =
 
                                     modelMapper state = mState
                                     |@ $"%A{msg}: model = %A{mState}, actual = %A{c.State}"
-                                    .&. Cmd.assertMsg mCmds cmds }
+                                    .&. Cmd.msgProperty mCmds cmds }
                     }
 
                 Gen.oneof [ startMsgOperation
@@ -318,7 +318,7 @@ module AppStateMachine =
 
                                 modelMapper state = mState
                                 |@ $"%A{msg}: model = %A{mState}, actual = %A{c.State}"
-                                .&. Cmd.assertMsg mCmds cmds }
+                                .&. Cmd.msgProperty mCmds cmds }
                 })
 
     [<Property>]

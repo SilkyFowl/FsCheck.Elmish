@@ -6,7 +6,7 @@ open Elmish
 
 
 module Cmd =
-
+    /// Capture `'Msg` returned by `'Cmd`.
     let captureMsg (cmd: Cmd<'Msg>) =
         let mutable counter = List.length cmd
         let arr = ResizeArray()
@@ -22,10 +22,13 @@ module Cmd =
 
         Seq.readonly arr
 
+    /// Capture `'Msg` returned by `'Cmd` async.
     let captureMsgAsync (cmd: Cmd<'Msg>) = async { return captureMsg cmd }
 
     let private printerrormsg expect actual = sprintf "\n\nexpected cmdMsg = %A\n\nactual cmdMsg = %A\n" expect actual
-    let assertMsgAsync expect actual =
+
+    /// Generates a asynchronous property-based test that compare `'Msg`.
+    let msgPropertyAsync (expect:Cmd<'Msg>) (actual:Cmd<'Msg>) =
         async {
             let! expectMsg = captureMsgAsync expect
             let! actualMsg = captureMsgAsync actual
@@ -36,8 +39,8 @@ module Cmd =
                 |@ printerrormsg expectMsg actualMsg
         }
 
-
-    let assertMsg expect actual =
+    /// Generates a property-based test that compare `'Msg`.
+    let msgProperty (expect:Cmd<'Msg>) (actual:Cmd<'Msg>) =
         let expectMsg = captureMsg expect
         let actualMsg = captureMsg actual
 
